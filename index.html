@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>price calculater</p>
+    <input class="text" placeholder="enter the amount" onkeydown="enterfuntion()">
+    <button class="calc" onclick="calculate()">calculate</button>
+    <p class="newpara"></p>
+    <input class="text2" placeholder="enter your name..." id="">
+    <button onclick="fun3()">Enter</button>
+    <p class="newp"></p>
+    <button class="head" onclick="fun4()">heads</button>
+    <button class="tail"onclick="fun5()">tails</button>
+    <p class="para"></p>
+    <script>
+        function fun4(){
+         document.querySelector('.para').innerHTML='you choosed heads';
+         
+        }
+        function fun5(){
+         document.querySelector('.para').innerHTML='you choosed tails';
+         
+        }
+        function fun3(){
+            const name=document.querySelector('.text2').value;
+        document.querySelector('.newp').innerHTML=`your name is ${name}`;
+        }
+        function enterfuntion(){
+            if(event.key==='Enter'){
+                calculate();
+            }
+        }
+        function calculate(){
+         let amaount=Number(document.querySelector('.text').value);
+         if(amaount<40){
+            amaount+=10;
+         }
+         document.querySelector('.newpara').innerHTML=`$${amaount}`;
+     
+        }
+    </script>
+</body>
+
+</html>
